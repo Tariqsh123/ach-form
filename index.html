@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achievers Corner</title>
+
+<style>
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    background: #A5C89E;
+    color: #000000;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== WRAPPER ===== */
+.achievers-wrapper {
+    width: 100%;
+    max-width: 520px;
+    background-color: white;
+    margin: 10px;
+    box-shadow: 1px 1px 5px gray;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+/* ===== HEADER ===== */
+.achievers-header {
+    margin-bottom: 35px;
+}
+
+.achievers-header h2 {
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.achievers-header span {
+    display: block;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ===== FORM ===== */
+.achievers-form-group {
+    margin-bottom: 25px;
+}
+
+.achievers-form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.achievers-form-group input {
+    width: 100%;
+    padding: 14px 12px;
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid #000;
+    background: transparent;
+    transition: 0.3s ease;
+}
+
+.achievers-form-group input:focus {
+    outline: none;
+    border-color: #A5C89E;
+}
+
+/* ===== BUTTON ===== */
+.achievers-btn {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #000;
+    background: transparent;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.achievers-btn:hover {
+    background: #A5C89E;
+    border-color: #A5C89E;
+}
+
+/* ===== FOOTER ===== */
+.achievers-footer {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #555;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 500px) {
+    .achievers-wrapper {
+        padding: 28px 22px;
+    }
+    .achievers-header h2 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="achievers-wrapper">
+
+    <div class="achievers-header">
+        <h2>Achievers Corner</h2>
+        <span>Official Registration Form</span>
+    </div>
+
+    <!-- NETLIFY FORM -->
+    <form name="achievers-registration" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="achievers-registration">
+
+        <div class="achievers-form-group">
+            <label>Full Name</label>
+            <input type="text" name="full_name" required>
+        </div>
+
+        <div class="achievers-form-group">
+            <label>Father Name</label>
+            <input type="text" name="father_name" required>
+        </div>
+
+        <div class="achievers-form-group">
+            <label>Timing</label>
+            <input type="text" name="timing" required>
+        </div>
+
+        <button type="submit" class="achievers-btn">
+            SUBMIT
+        </button>
+    </form>
+
+</div>
+
+</body>
+</html>
