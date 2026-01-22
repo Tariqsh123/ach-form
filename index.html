@@ -120,7 +120,6 @@ body {
 </head>
 
 <body>
-
 <div class="achievers-wrapper">
 
     <div class="achievers-header">
@@ -128,10 +127,7 @@ body {
         <span>Official Registration Form</span>
     </div>
 
-    <!-- NETLIFY FORM -->
-    <form name="achievers-registration" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="achievers-registration">
-
+    <form name="achievers-registration">
         <div class="achievers-form-group">
             <label>Full Name</label>
             <input type="text" name="full_name" required>
@@ -147,13 +143,10 @@ body {
             <input type="text" name="timing" required>
         </div>
 
-        <button type="submit" class="achievers-btn">
-            SUBMIT
-        </button>
+        <button type="submit" class="achievers-btn">SUBMIT</button>
     </form>
 
 </div>
-
 
 <script>
 const form = document.querySelector('form[name="achievers-registration"]');
@@ -192,8 +185,6 @@ form.addEventListener('submit', async (e) => {
   }
 });
 </script>
-
-
 
 </body>
 </html>
