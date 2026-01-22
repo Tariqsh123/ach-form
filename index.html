@@ -159,9 +159,8 @@ body {
 const form = document.querySelector('form[name="achievers-registration"]');
 
 form.addEventListener('submit', async (e) => {
-  e.preventDefault(); // Prevent default page reload
+  e.preventDefault();
 
-  // Collect form data
   const data = {
     full_name: form.full_name.value,
     father_name: form.father_name.value,
@@ -169,7 +168,6 @@ form.addEventListener('submit', async (e) => {
   };
 
   try {
-    // Send POST request to your Apps Script Web App
     const res = await fetch(
       "https://script.google.com/macros/s/AKfycbxpYv5tsayQ27jb9GStFCUQ3zAQ68aXDmqAsu88iqp5r9bq61xOBiVx3gNqDn2_KG9y6w/exec",
       {
@@ -181,15 +179,16 @@ form.addEventListener('submit', async (e) => {
 
     const result = await res.json();
 
-    if (result.status === "success") {
+    if(result.status === "success"){
       alert("✅ Form submitted successfully!");
-      form.reset(); // Clear the form
+      form.reset();
     } else {
-      alert("❌ Something went wrong. Try again!");
+      alert("❌ Something went wrong.");
     }
-  } catch (err) {
+
+  } catch(err) {
     console.error(err);
-    alert("❌ Connection error. Check your internet or Apps Script deployment.");
+    alert("❌ Connection error. Check Apps Script deployment & access settings.");
   }
 });
 </script>
