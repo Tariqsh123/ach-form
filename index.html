@@ -162,7 +162,7 @@ form.addEventListener('submit', async (e) => {
 
   try {
     const res = await fetch(
-      "https://script.google.com/macros/s/AKfycbxpYv5tsayQ27jb9GStFCUQ3zAQ68aXDmqAsu88iqp5r9bq61xOBiVx3gNqDn2_KG9y6w/exec",
+      "https://script.google.com/macros/s/AKfycbwF883KUodv3cOUqTDxu5A2dPrv1XgX005qjN2kKhiXdq8XIkgH5kZcvQ8Naa9uI5U1nA/exec",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -173,15 +173,15 @@ form.addEventListener('submit', async (e) => {
     const result = await res.json();
 
     if(result.status === "success"){
-      alert("✅ Form submitted successfully!");
+      alert("Form submitted successfully!");
       form.reset();
     } else {
-      alert("❌ Something went wrong.");
+      alert("Something went wrong.");
     }
 
   } catch(err) {
     console.error(err);
-    alert("❌ Connection error. Check Apps Script deployment & access settings.");
+    alert("Connection error. Check Apps Script deployment & access settings.");
   }
 });
 </script>
